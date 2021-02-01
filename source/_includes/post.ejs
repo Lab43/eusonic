@@ -1,0 +1,24 @@
+<article>
+  <% if (isArchive) { %>
+    <h2><%- include('crazy-link', {link: slug, text: title}) %></h2>
+  <% } else { %>
+    <h1><%- title %></h1>
+  <% } %>
+  <div class='meta'>
+    <%= formatDate(date, 'MMMM d, yyyy') %>
+    <% if (locals.youtube) { %>
+      • Video
+    <% } else if (locals.simplecast) { %>
+      • Podcast
+    <% } %>
+  </div>
+  <%- content %>
+  <% if (locals.youtube) { %>
+    <a href='<%= youtube %>' class='stealth'>
+      <%- srcset(`/${slug}.jpg`, 'youtube', {class: 'youtube'}); %>
+    </a>
+  <% } %>
+  <% if (locals.simplecast) { %>
+    <%- simplecast %>
+  <% } %>
+</article>

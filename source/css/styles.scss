@@ -1,0 +1,43 @@
+// =========
+// variables
+// =========
+
+$base-size: 20px;
+
+// 640px for youtube thumbnails
+// 20px * 2 for body padding
+// 20px * 2 for border on <html>
+$breakpoint: 640px + ($base-size * 4);
+
+:root {
+
+  --pink: #d941d9;
+  --yellow: #d9d941;
+  --blue: #41d9d9;
+
+  --text: #4c3740;
+  --link: var(--pink);
+  --link-hover: var(--blue);
+
+  --background: #fff;
+  --border: #efefe4;
+
+  --light-weight: 300;
+  --heavy-weight: 900;
+
+}
+
+
+
+// =======
+// imports
+// =======
+
+@import 'global/media-queries';
+@import 'global/layout';
+@import 'global/typography';
+
+@import 'components/crazy-link';
+
+@import 'pages/home';
+@import 'pages/post';

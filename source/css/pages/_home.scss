@@ -1,0 +1,12 @@
+body > header {
+  font-size: 1.3rem;
+  font-weight: var(--light-weight);
+  line-height: 2;
+  h1 {
+    text-align: center;
+    margin: 0 -1rem; // so the text is still centered even if it's overflowing
+    @include large {
+      font-size: 9rem;
+    }
+  }
+}

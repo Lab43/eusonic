@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include large {
+    border: 1rem solid var(--border);
+  }
+}
+
+body {
+  max-width: 32rem + 2rem; // 640px for youtube thumbnails + 2rem for padding
+  padding: 1rem;
+  margin: 0 auto;
+}
