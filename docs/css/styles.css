@@ -47,9 +47,11 @@ a:not([data-crazy]):not(.stealth):not(.logo):not(.toggle-dark) {
   border-bottom: 0.15em solid var(--link);
   transition: color 0.25s, border-color 0.25s;
 }
-a:not([data-crazy]):not(.stealth):not(.logo):not(.toggle-dark):hover, a:not([data-crazy]):not(.stealth):not(.logo):not(.toggle-dark).active {
-  color: var(--link-hover);
-  border-bottom-color: var(--link-hover);
+@media (hover: hover) and (pointer: fine) {
+  a:not([data-crazy]):not(.stealth):not(.logo):not(.toggle-dark):hover, a:not([data-crazy]):not(.stealth):not(.logo):not(.toggle-dark).active {
+    color: var(--link-hover);
+    border-bottom-color: var(--link-hover);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 p,
@@ -128,40 +130,44 @@ html.alt {
 }
 
 [data-crazy] {
-  position: relative;
-  display: inline-block;
   color: var(--text);
-  text-decoration: none;
 }
-[data-crazy] span, [data-crazy]:before, [data-crazy]:after {
-  display: block;
-  transition: transform 0.5s;
-  mix-blend-mode: var(--blend-mode);
-}
-[data-crazy]:before, [data-crazy]:after {
-  content: attr(data-crazy);
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0;
-}
-[data-crazy] span {
-  color: var(--pink);
-}
-[data-crazy]:before {
-  color: var(--blue);
-}
-[data-crazy]:after {
-  color: var(--yellow);
-}
-[data-crazy]:hover span {
-  transform: translate(0, -0.05em);
-}
-[data-crazy]:hover:before {
-  transform: translate(-0.0433012702em, 0.025em);
-}
-[data-crazy]:hover:after {
-  transform: translate(0.0433012702em, 0.025em);
+@media (hover: hover) and (pointer: fine) {
+  [data-crazy] {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  [data-crazy] span, [data-crazy]:before, [data-crazy]:after {
+    display: block;
+    transition: transform 0.5s;
+    mix-blend-mode: var(--blend-mode);
+  }
+  [data-crazy]:before, [data-crazy]:after {
+    content: attr(data-crazy);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0;
+  }
+  [data-crazy] span {
+    color: var(--pink);
+  }
+  [data-crazy]:before {
+    color: var(--blue);
+  }
+  [data-crazy]:after {
+    color: var(--yellow);
+  }
+  [data-crazy]:hover span {
+    transform: translate(0, -0.05em);
+  }
+  [data-crazy]:hover:before {
+    transform: translate(-0.0433012702em, 0.025em);
+  }
+  [data-crazy]:hover:after {
+    transform: translate(0.0433012702em, 0.025em);
+  }
 }
 
 .logo {
@@ -198,12 +204,14 @@ html.alt {
   left: 1.91rem;
   border-top-color: var(--yellow);
 }
-.logo:hover span, .logo:hover:before, .logo:hover:after {
-  transform: translate(-0.6303rem, -1.1rem) rotate(120deg);
-}
 @media (min-width: 720px) {
   .logo {
     margin: 6rem auto;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .logo:hover span, .logo:hover:before, .logo:hover:after {
+    transform: translate(-0.6303rem, -1.1rem) rotate(120deg);
   }
 }
 

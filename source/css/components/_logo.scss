@@ -38,14 +38,16 @@
     left: $o * $w;
     border-top-color: var(--yellow);
   }
-  &:hover {
-    span,
-    &:before,
-    &:after {
-      transform: translate($w * $o * -0.33, $w * -0.22) rotate(120deg); // no idea where -0.22 came from, but it works
-    }
-  }
   @include large {
     margin: 6rem auto;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      span,
+      &:before,
+      &:after {
+        transform: translate($w * $o * -0.33, $w * -0.22) rotate(120deg); // no idea where -0.22 came from, but it works
+      }
+    }
   }
 }

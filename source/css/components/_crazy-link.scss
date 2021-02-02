@@ -1,47 +1,49 @@
 @use 'sass:math';
 
 [data-crazy] {
-  // points of a right triangle which is half of an equilateral triangle
-  $a: 0.05em;
-  $b: math.cos(30deg) * $a;
-  $c: math.sin(30deg) * $a;
-  position: relative;
-  display: inline-block;
   color: var(--text);
-  text-decoration: none;
-  span,
-  &:before,
-  &:after {
-    display: block;
-    transition: transform 0.5s;
-    mix-blend-mode: var(--blend-mode);
-  }
-  &:before,
-  &:after {
-    content: attr(data-crazy);
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0;
-  }
-  span {
-    color: var(--pink);
-  }
-  &:before {
-    color: var(--blue);
-  }
-  &:after {
-    color: var(--yellow);
-  }
-  &:hover {
+  @media (hover: hover) and (pointer: fine) {
+    // points of a right triangle which is half of an equilateral triangle
+    $a: 0.05em;
+    $b: math.cos(30deg) * $a;
+    $c: math.sin(30deg) * $a;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    span,
+    &:before,
+    &:after {
+      display: block;
+      transition: transform 0.5s;
+      mix-blend-mode: var(--blend-mode);
+    }
+    &:before,
+    &:after {
+      content: attr(data-crazy);
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0;
+    }
     span {
-      transform: translate(0, $a * -1);
+      color: var(--pink);
     }
     &:before {
-      transform: translate($b * -1, $c);
+      color: var(--blue);
     }
     &:after {
-      transform: translate($b, $c);
+      color: var(--yellow);
+    }
+    &:hover {
+      span {
+        transform: translate(0, $a * -1);
+      }
+      &:before {
+        transform: translate($b * -1, $c);
+      }
+      &:after {
+        transform: translate($b, $c);
+      }
     }
   }
 }
