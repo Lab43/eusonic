@@ -13,7 +13,7 @@ const Underdot = require('underdot')
 
 
 const srcsetPresets = {
-  youtube: {
+  thumbnail: {
     sizes: '(max-width: 640px) 100vw, 640px',
     srcset: [1280, 1000, 800, 600],
   },
@@ -39,7 +39,7 @@ const underdot = new Underdot({
     }),
     postcss([autoprefixer]),
     srcset({presets: srcsetPresets}),
-    cname('eusonic.com'),
+    cname('www.eusonic.com'),
     hash(),
     templateHelpers(),
   ]

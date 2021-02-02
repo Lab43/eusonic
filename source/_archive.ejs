@@ -3,3 +3,7 @@
 <% posts.sort((a, b) => b.date - a.date).forEach((post) => { %>
   <%- include('post', {isArchive: true, ...post}); %>
 <% }); %>
+
+<footer>
+  <%- include('logo') %>
+</footer>

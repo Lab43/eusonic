@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+.logo {
+  $w: 5rem;
+  $o: 1 - 0.618;
+  display: block;
+  position: relative;
+  width: $w * (1 + $o);
+  height: math.cos(30deg) * $w * (1 + $o);
+  color: rgba(0, 0, 0, 0); // make text transparent
+  margin: 3rem auto;
+  span,
+  &:before,
+  &:after {
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: math.cos(30deg) * $w solid var(--pink);
+    border-left: $w/2 solid transparent;
+    border-right: $w/2 solid transparent;
+    mix-blend-mode: var(--blend-mode);
+    transition: transform 0.5s;
+  }
+  span {
+    margin: 0 auto;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: $o * math.cos(30deg) * $w;
+  }
+  &:before {
+    right: $o * $w;
+    border-top-color: var(--blue);
+  }
+  &:after {
+    left: $o * $w;
+    border-top-color: var(--yellow);
+  }
+  &:hover {
+    span,
+    &:before,
+    &:after {
+      transform: translate($w * $o * -0.33, $w * -0.22) rotate(120deg); // no idea where -0.22 came from, but it works
+    }
+  }
+  @include large {
+    margin: 6rem auto;
+  }
+}

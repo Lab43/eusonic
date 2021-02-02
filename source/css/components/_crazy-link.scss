@@ -14,7 +14,7 @@
   &:after {
     display: block;
     transition: transform 0.5s;
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--blend-mode);
   }
   &:before,
   &:after {

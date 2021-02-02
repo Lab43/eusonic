@@ -3,6 +3,8 @@
 }
 
 html {
+  min-height: 100vh;
+  background: var(--background);
   @include large {
     border: 1rem solid var(--border);
   }

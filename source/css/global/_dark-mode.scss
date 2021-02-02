@@ -1,0 +1,43 @@
+@mixin lightMode {
+  --blend-mode: multiply;
+  --text: #4c3740;
+  --background: #fff;
+  --border: #efefe4;
+}
+
+@mixin darkMode {
+  --blend-mode: screen;
+  --text: #ddd;
+  --background: #222;
+  --border: #333;
+}
+
+html {
+  @include lightMode;
+}
+html.alt {
+  @include darkMode;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    @include darkMode;
+  }
+  html.alt {
+    @include lightMode;
+  }
+}
+
+.toggle-dark {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  @include large {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
