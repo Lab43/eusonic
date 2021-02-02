@@ -2,6 +2,7 @@
 
 [data-crazy] {
   color: var(--text);
+  text-decoration: none;
   @media (hover: hover) and (pointer: fine) {
     // points of a right triangle which is half of an equilateral triangle
     $a: 0.05em;
@@ -9,7 +10,6 @@
     $c: math.sin(30deg) * $a;
     position: relative;
     display: inline-block;
-    text-decoration: none;
     span,
     &:before,
     &:after {
