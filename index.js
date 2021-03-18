@@ -5,7 +5,7 @@ const Underdot = require('underdot')
     , srcset = require('underdot-srcset')
     , ejs = require('underdot-ejs')
     , cname = require('underdot-cname')
-    , hash = require('underdot-hash')
+    , bust = require('underdot-bust')
     , collection = require('underdot-collection')
     , templateHelpers = require('underdot-template-helpers')
 ;
@@ -40,7 +40,7 @@ const underdot = new Underdot({
     postcss([autoprefixer]),
     srcset({presets: srcsetPresets}),
     cname('www.eusonic.com'),
-    hash(),
+    bust(),
     templateHelpers(),
   ]
 });
