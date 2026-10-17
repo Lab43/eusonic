@@ -1,7 +1,7 @@
-<%- content %>
+<%- _content %>
 
-<% posts.sort((a, b) => b.date - a.date).forEach((post) => { %>
-  <%- include('post', {isArchive: true, ...post}); %>
+<% posts.toSorted((a, b) => b.date - a.date).forEach((post) => { %>
+  <%- include('post', {isArchive: true, ...post, _content: pageBody(post._url)}); %>
 <% }); %>
 
 <footer>
