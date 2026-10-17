@@ -105,7 +105,6 @@ html.alt {
     --background: #222;
     --border: #333;
   }
-
   html.alt {
     --blend-mode: multiply;
     --text: #4c3740;

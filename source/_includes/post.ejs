@@ -7,10 +7,11 @@
   <div class='meta'>
     <%= formatDate(date, 'MMMM d, yyyy') %> • <%= type %>
   </div>
-  <%- content %>
-  <% if (fileExists(`/${slug}.jpg`)) { %>
+  <%- _content %>
+  <% const image = `${_url.replace(/\/$/, '')}.jpg`; %>
+  <% if (fileExists(image)) { %>
     <a href='<%= link %>' class='stealth'>
-      <%- srcset(`/${slug}.jpg`, 'thumbnail'); %>
+      <%- imageSet(image, 'thumbnail'); %>
     </a>
   <% } %>
 </article>

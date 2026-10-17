@@ -1,10 +1,10 @@
-## Building and Watching
+## Building and Developing
 
-This is the repo for my personal website www.eusonic.com. It's built with my open source static site generator [Underdot](https://github.com/Lab43/underdot).
+This is the repo for my personal website www.eusonic.com. It's built with my open source static site generator [Underdot](https://github.com/Lab43/underdot), configured in `underdot.config.ts`.
 
 * First run `npm install` to install dependencies.
-* Use `npm run build` to compile the site.
-* Use `npm run watch` to have [nodemon](https://nodemon.io) automatically compile the site when it detects changes in the source directory.
+* Use `npm run build` to build `source/` into `docs/`, which GitHub Pages serves.
+* Use `npm run dev` to build, serve the site, rebuild on every change, and reload the browser. It serves on port 3000, or the next free port when 3000 is busy. Pass a port with `npm run dev -- --port <n>`.
 
 ## Working with q
 
