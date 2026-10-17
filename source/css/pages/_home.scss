@@ -1,3 +1,5 @@
+@use '../global/media-queries' as *;
+
 body > header {
   font-size: 1rem;
   font-weight: var(--light-weight);

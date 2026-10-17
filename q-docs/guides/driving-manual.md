@@ -27,4 +27,3 @@ Run it in the background and kill it after about 20 seconds. Chrome writes the s
 ## Failures that aren't bugs
 
 - **Headless Chrome hangs and writes no screenshot.** `--virtual-time-budget` never completes against the dev server, because the page keeps a live-reload connection open. Use `--timeout` instead, as above.
-- **The build prints Sass deprecation warnings and a lone `null` line.** The warnings are about `@import` and `/` division in `source/css/`, and they don't fail the build. The `null` follows Sass's "repetitive deprecation warnings omitted" message and comes from how `underdot-sass` prints it. The build still succeeds when it ends with `✓ Built in`.

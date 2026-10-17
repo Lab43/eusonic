@@ -1,3 +1,5 @@
+@use 'media-queries' as *;
+
 @mixin lightMode {
   --blend-mode: multiply;
   --text: #4c3740;

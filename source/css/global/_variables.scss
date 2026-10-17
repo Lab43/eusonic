@@ -1,0 +1,6 @@
+$base-size: 20px;
+
+// 640px for youtube thumbnails
+// 20px * 2 for body padding
+// 20px * 2 for border on <html>
+$breakpoint: 640px + ($base-size * 4);
