@@ -1,0 +1,6 @@
+{
+  "extraKnownMarketplaces": {
+    "q-pin-lab43-eusonic-c2a82b": { "source": { "source": "directory", "path": "./" } }
+  },
+  "enabledPlugins": { "q@q-pin-lab43-eusonic-c2a82b": true }
+}
