@@ -16,5 +16,8 @@
     "underdot-sass": "^1.0.0",
     "underdot-srcset": "^1.0.0",
     "underdot-template-helpers": "^1.0.0"
+  },
+  "devDependencies": {
+    "@lab43/q": "1.0.0"
   }
 }
