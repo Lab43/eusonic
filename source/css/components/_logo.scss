@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use '../global/media-queries' as *;
 
 .logo {
   $w: 5rem;
@@ -16,8 +17,8 @@
     height: 0;
     display: block;
     border-top: math.cos(30deg) * $w solid var(--pink);
-    border-left: $w/2 solid transparent;
-    border-right: $w/2 solid transparent;
+    border-left: math.div($w, 2) solid transparent;
+    border-right: math.div($w, 2) solid transparent;
     mix-blend-mode: var(--blend-mode);
     transition: transform 0.5s;
   }
